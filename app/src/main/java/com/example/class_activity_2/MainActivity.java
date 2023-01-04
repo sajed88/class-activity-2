@@ -31,7 +31,8 @@ EditText t1;
         t3 = findViewById(R.id.editTextTextPersonName3);
          s1 = findViewById(R.id.switch1);
 
-
+        books.add(new Book("java","sajed",5));
+        books.add(new Book("c++","same",8));
 
 
 
@@ -47,8 +48,7 @@ EditText t1;
 
     public void btnSave(View view) {
 
-        books.add(new Book("java","sajed",5));
-        books.add(new Book("c++","same",8));
+
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
         Gson gson = new Gson();
